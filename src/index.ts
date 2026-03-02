@@ -6,6 +6,13 @@ import { initDatabase } from './database/db';
 import logger from './utils/logger';
 import { startAlertMonitor } from './services/monitor';
 
+// Extend Client type to include commands
+declare module 'discord.js' {
+  interface Client {
+    commands: Collection<string, any>;
+  }
+}
+
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,

@@ -1,7 +1,7 @@
 import sqlite3 from 'sqlite3';
 import { open, Database } from 'sqlite';
-import { config } from './config';
-import logger from './utils/logger';
+import { config } from '../config';
+import logger from '../utils/logger';
 
 let db: Database<sqlite3.Database, sqlite3.Statement> | null = null;
 
